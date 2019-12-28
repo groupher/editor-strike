@@ -9,9 +9,9 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  border-top: 1px solid;
-  border-top-color: #053743;
-  height: 45%;
+  border-top: 2px solid;
+  z-index: -1;
+  border-top-color: #8ab0b5;
   height: calc(50% - 1px);
   width: 100%;
 }
