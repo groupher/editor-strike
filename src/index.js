@@ -36,7 +36,7 @@ export default class Strike {
      *
      * @type {string}
      */
-    this.tag = "SPAN";
+    this.tag = "strike";
 
     /**
      * CSS classes
@@ -184,7 +184,7 @@ export default class Strike {
    */
   static get sanitize() {
     return {
-      span: {
+      strike: {
         class: Strike.CSS,
       },
     };
