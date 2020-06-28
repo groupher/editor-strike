@@ -1,14 +1,14 @@
 /**
  * Build styles
  */
-require("./index.css").toString();
+import "./index.css";
 
 /**
  * Strike Tool for the Editor.js
  *
  * Allows to wrap inline fragment and style it somehow.
  */
-class Strike {
+export default class Strike {
   /**
    * Class name for term-tag
    *
@@ -43,7 +43,7 @@ class Strike {
      */
     this.iconClasses = {
       base: this.api.styles.inlineToolButton,
-      active: this.api.styles.inlineToolButtonActive
+      active: this.api.styles.inlineToolButtonActive,
     };
   }
 
@@ -185,10 +185,8 @@ class Strike {
   static get sanitize() {
     return {
       span: {
-        class: Strike.CSS
-      }
+        class: Strike.CSS,
+      },
     };
   }
 }
-
-module.exports = Strike;

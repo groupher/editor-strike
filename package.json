@@ -5,10 +5,9 @@
     "codex editor",
     "strike",
     "tool",
-    "editor.js",
-    "editorjs"
+    "editor.js"
   ],
-  "description": "Strike Tool for Editor.js",
+  "description": "inline strike for Editor.js",
   "license": "MIT",
   "repository": "https://github.com/groupher/editor-strike",
   "main": "./dist/bundle.js",
