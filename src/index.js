@@ -33,6 +33,7 @@ export default class Strike {
 
     /**
      * Tag represented the term
+     * NOTE: uppercase is MUST
      *
      * @type {string}
      */
@@ -159,7 +160,7 @@ export default class Strike {
     termWrapper.parentNode.removeChild(termWrapper);
 
     /**
-     * Insert extracted and decoded
+     * Insert extracted
      */
     range.insertNode(unwrappedContent);
 
