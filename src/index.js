@@ -62,7 +62,6 @@ export default class Strike {
    */
   static get title() {
     return "删除线";
-    return "Base64 编/解码";
   }
 
   /**
