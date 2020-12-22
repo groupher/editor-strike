@@ -1,17 +1,6 @@
 .cdx-strike {
-  text-decoration: none;
+  text-decoration: line-through;
+  text-decoration-color: #8ab0b5;
   position: relative;
   display: inline-block;
-}
-
-.cdx-strike::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  border-top: 2px solid;
-  z-index: -1;
-  border-top-color: #8ab0b5;
-  height: calc(50% - 1px);
-  width: 100%;
 }

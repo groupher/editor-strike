@@ -36,7 +36,7 @@ export default class Strike {
      *
      * @type {string}
      */
-    this.tag = "strike";
+    this.tag = "STRIKE";
 
     /**
      * CSS classes
@@ -62,6 +62,7 @@ export default class Strike {
    */
   static get title() {
     return "删除线";
+    return "Base64 编/解码";
   }
 
   /**
@@ -117,9 +118,9 @@ export default class Strike {
     /**
      * Create a wrapper for highlighting
      */
-    let strike = document.createElement(this.tag);
+    let tag = document.createElement(this.tag);
 
-    strike.classList.add(Strike.CSS);
+    tag.classList.add(Strike.CSS);
 
     /**
      * SurroundContent throws an error if the Range splits a non-Text node with only one of its boundary points
@@ -127,13 +128,14 @@ export default class Strike {
      *
      * // range.surroundContents(span);
      */
-    strike.appendChild(range.extractContents());
-    range.insertNode(strike);
+    tag.appendChild(range.extractContents());
+
+    range.insertNode(tag);
 
     /**
      * Expand (add) selection to highlighted block
      */
-    this.api.selection.expandToTag(strike);
+    this.api.selection.expandToTag(tag);
   }
 
   /**
@@ -158,7 +160,7 @@ export default class Strike {
     termWrapper.parentNode.removeChild(termWrapper);
 
     /**
-     * Insert extracted content
+     * Insert extracted and decoded
      */
     range.insertNode(unwrappedContent);
 
